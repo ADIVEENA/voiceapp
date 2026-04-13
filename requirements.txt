@@ -1,0 +1,35 @@
+# VoiceApp — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Audio ──────────────────────────────────────
+pyaudio>=0.2.13
+numpy>=1.24.0
+
+# ── Speech to Text ─────────────────────────────
+faster-whisper>=1.0.0
+
+# ── Voice Activity Detection ───────────────────
+silero-vad>=4.0.0
+
+# ── PyTorch (CPU version — install separately) ─
+# Run: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+# ── NLP ────────────────────────────────────────
+spacy>=3.7.0
+# After install run: python -m spacy download en_core_web_sm
+
+# ── Windows System ─────────────────────────────
+pywin32>=306
+keyboard>=0.13.5
+pystray>=0.19.5
+Pillow>=10.0.0
+
+# ── Async / Network ────────────────────────────
+aiohttp>=3.9.0
+
+# ── Backend (for later) ────────────────────────
+fastapi>=0.110.0
+uvicorn>=0.27.0
+supabase>=2.0.0
+stripe>=8.0.0
+python-dotenv>=1.0.0

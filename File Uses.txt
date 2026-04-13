@@ -1,0 +1,47 @@
+C:\AI\WisperVoice\ml\
+│
+├── audio_capture.py    ← EAR
+│                          Listens to your microphone
+│                          Detects when you start/stop speaking
+│                          Sends audio chunks to STT
+│
+├── stt.py              ← BRAIN
+│                          Takes audio from audio_capture
+│                          Runs Whisper AI model locally
+│                          Converts sound waves → raw text
+│                          "my name is aditya kalra"
+│
+├── nlp.py              ← EDITOR
+│                          Takes raw text from STT
+│                          Removes filler words (um, uh, like)
+│                          Fixes grammar and punctuation
+│                          Capitalizes names (Aditya, GitHub)
+│                          Handles backtrack ("2pm actually 3pm" → "3pm")
+│                          "My name is Aditya Kalra."
+│
+├── text_inject.py      ← HANDS
+│                          Takes clean text from NLP
+│                          Finds the active window
+│                          Uses Windows API to paste text
+│                          Works in Notepad, Gmail, Word, anywhere
+│
+├── pipeline.py         ← THE BOSS (run this one)
+│                          Controls everything above
+│                          Listens for Ctrl+Space hotkey
+│                          HOLD = start recording
+│                          RELEASE = transcribe + inject
+│                          Connects all 4 files together
+│
+├── dictionary.json     ← YOUR PERSONAL VOCABULARY
+│                          Teaches app your name: Kalra not Kalfa
+│                          Fixes words Whisper gets wrong
+│                          You can add any word anytime
+│
+├── snippets.json       ← VOICE SHORTCUTS
+│                          Say "my email" → types full email address
+│                          Say "sign off" → types full signature
+│                          You can add your own shortcuts
+│
+└── requirements.txt    ← SHOPPING LIST
+                           List of all Python packages needed
+                           Used only once during setup
